@@ -4,8 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="calculatrice.css" rel="stylesheet">
+    <script src="calculatrice.js"></script>
 </head>
 <body>
-    <h1>EC-19</h1>
+    <h1>EC-19</h1>         
+    <div id="contour">
+        <label>Calculatrice EC-19 :</label>
+        <br><br>
+        <input id="resultat" />
+        <br>
+        <button id="v1" onclick="onClick_Nombre(1);">1</button>
+        <button id="v2" onclick="onClick_Nombre(2);">2</button>
+        <button id="v3" onclick="onClick_Nombre(3);">3</button>
+        <button onclick="addition_onClick();">+</button>
+        <br>
+        <button id="v4" onclick="onClick_Nombre(4);">4</button>
+        <button id="v5" onclick="onClick_Nombre(5);">5</button>
+        <button id="v6" onclick="onClick_Nombre(6);">6</button>
+        <button onclick="soustraction_onClick();">-</button>
+        <br>
+        <button id="v7" onclick="onClick_Nombre(7);">7</button>
+        <button id="v8" onclick="onClick_Nombre(8);">8</button>
+        <button id="v9" onclick="onClick_Nombre(9);">9</button>
+        <button onclick="multiplication_onClick();">*</button>
+        <button onclick="refresh_onClick();">C</button>
+        <br>
+        <button id="v0" onclick="onClick_Nombre(0);">0</button>
+        <button onclick="soustraction_onClick();">.</button>
+        <button onclick="reverse_onClick();">+/-</button>
+        <button onclick="division_onClick();">/</button>
+        <button onclick="egal_onClick();">=</button>
+    </div>
 </body>
 </html>
