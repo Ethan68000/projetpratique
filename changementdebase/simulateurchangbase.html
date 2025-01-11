@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../math.css" rel="stylesheet">
+    <script src="changbase.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <img src="../logo.jpg" alt="Logo Math SIO" style="width: 80px; height: auto;">
+            </li>
+            <li><a href="../math.html">Accueil</a></li>
+            <!-- Calculatrice -->
+            <li><a href="../calculatrice/calculatrice.html">Calculatrice</a></li>
+    
+            <!-- Changement de base -->
+            <li>
+                <a href="#">Changement de base</a>
+                <ul>
+                    <li><a href="changbase.html">Cours changement de base</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <h1>bienvenue sur le simulateur de changement de base</h1>
+    <div id="nombremis">
+        <h2>Entrez un nombre à convertir</h2>
+        <input type="text" id="nombredepart" placeholder="Entrez un nombre en base 2" />
+        <select id="choixbase">
+            <option value="1">(2)</option>
+            <option value="2">(10)</option>
+            <option value="3">(16)</option>
+        </select>
+        <button onclick="convertir()">Convertir</button>
+    </div>
+    <div id="resultat">
+        <p>Résultat en base 10:</p>
+        <input type="text" id="resultatAffichage1" readonly />
+        <p>resultat en base 16</p>
+        <input type="text" id="resultatAffichage2" readonly />
+    </div>    
+</body>
+</html>
