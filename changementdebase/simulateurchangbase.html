@@ -27,21 +27,59 @@
         </ul>
     </nav>
     <h1>bienvenue sur le simulateur de changement de base</h1>
-    <div id="nombremis">
-        <h2>Entrez un nombre à convertir</h2>
-        <input type="text" id="nombredepart" placeholder="Entrez un nombre en base 2" />
-        <select id="choixbase">
-            <option value="1">(2)</option>
-            <option value="2">(10)</option>
-            <option value="3">(16)</option>
-        </select>
-        <button onclick="convertir()">Convertir</button>
+    <div id="conversionbase"></div>
+        <div id="nombremis">
+            <h2>Entrez un nombre à convertir</h2>
+            <input type="text" id="nombredepart" placeholder="Entrez un nombre en base 2" />
+            <select id="choixbase">
+                <option value="1">(2)</option>
+                <option value="2">(10)</option>
+                <option value="3">(16)</option>
+            </select>
+            <button onclick="convertir()">Convertir</button>
+        </div>
+        <div id="resultat">
+            <p>Résultat en base 10:</p>
+            <input type="text" id="resultatAffichage1" readonly />
+            <p>resultat en base 16</p>
+            <input type="text" id="resultatAffichage2" readonly />
+        </div>
     </div>
-    <div id="resultat">
-        <p>Résultat en base 10:</p>
-        <input type="text" id="resultatAffichage1" readonly />
-        <p>resultat en base 16</p>
-        <input type="text" id="resultatAffichage2" readonly />
+    <div id="changbase2a10det">
+        <h3>Pour changer de la base 2 a 10 il faut prend chaque chiffre et on le mutiplie par 2^n si il est a 1 en commencant a droite par 2^0</h3>
+        <p>prenons l'exemple de ce nombre <br> 1001 1101(2) = 157(10) <br> car on fait 2^0 + 2^2 + 2^3 + 2^4 + 2^7 = 1 + 4 + 8 + 16 + 128 = 157 </p>
+    </div>
+    <br>
+    <div id="changbase2a16det">
+        <h3>Pour changer de la base 2 a 16 il faut prend des packets de 4 nombre et les réunirs ensemble</h3>
+        <p>prenons l'exemple de ce nombre <br> 1001 1101 <br> 9 D</p>
+    </div>
+    <br>
+    <div id="changbase10a2det">
+        <h3>Pour changer un nombre de la base 10 à 2, prenez le nombre de départ et /2 <br>
+        On garde le quotient et on note le reste et on effectue ces étapes jusqu'à tant qu'on obtient un chiffre < 2. <br>
+        Une fois arrivé à la fin on lit le reste de chaque nombre de bas en haut pour obtenir le nombre en base 2 </h3>
+        <p>Prenons l'exemple de 221(10)</p>
+        <!--image-->
+        <p>Donc 221(10) = 11011101(2)</p>
+    </div>
+    <div id="changbase16a2det">
+        <h3>Pour changer de la base 16 a 2 il faut prendre chaque nombre et les convertir en paquets de 4 chiffre en base 2</h3>
+        <p>prenons l'exemple de ce nombre <br> A 8 5 <br> 1010 1000 0101</p>
+    </div>
+    <br>
+    <div id="changbase16a10det">
+        <h3>Pour changer de la base 16 a 10 il faut prend chaque chiffre et on le mutiplie par 16^n en commencant a droite par 16^0</h3>
+        <p>prenons l'exemple de ce nombre <br> A98B(16) = 43403(10) <br> car on fait B * 16^0 + 8 * 16^1 + 9 * 16^2 + A * 16^3 = 11 + 128 + 2304 + 40960 = 43403 </p>
+    </div>
+    <br>
+    <div id="changbase10a16det">
+        <h3>Pour changer un nombre de la base 10 à 16, prenez le nombre de départ et /16 <br>
+        On garde le quotient et on note le reste et on effectue ces étapes jusqu'à tant qu'on obtient un chiffre < 16. <br>
+        Une fois arrivé à la fin on lit le reste de chaque nombre de bas en haut pour obtenir le nombre en base 16 </h3>
+        <p>Prenons l'exemple de 221(10)</p>
+        <!--image-->
+        <p>Donc 22104(10) = 5658(16)</p>
     </div>    
 </body>
 </html>
