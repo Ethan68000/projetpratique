@@ -40,5 +40,28 @@
             </li>
         </ul>
     </nav>
+    <h1>Bienvenue sur le simulateur de matrices</h1>
+    <div id="matricecrée">
+        <h3>création de matrices</h3>
+        <input type="text" id="nombreligne" placeholder="Entrez le nombre de lignes" /><br><br>
+        <input type="text" id="nombrecol" placeholder="Entrez le nombre de colonnes" /><br><br>
+        <button onclick="creationmatrice()">validez</button>
+        <h3 id="resultatmatrice"></h3>
+    </div>
+    <div id="operationmatrice">
+        <h3>Opération de matrices</h3>
+        <select id="operateurmatrice">
+            <option value="1">+</option>
+            <option value="2">-</option>
+            <option value="3">*</option>
+        </select>
+        <button onclick="demanderDimensions()">Choisir</button>
+    </div>
+    
+    <div id="dimensionInput" style="margin-top: 20px;">
+        <!-- Les champs pour les dimensions des matrices seront ajoutés ici dynamiquement -->
+    </div>
+    
+    <h3 id="resultatmatrice2"></h3>
 </body>
 </html>
