@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../math.css" rel="stylesheet">
+    <script src="congruence.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -46,5 +47,13 @@
             </li>
         </ul>
     </nav>
+
+    <div id="petitcongruence">
+        <input type="text" id="nombre" placeholder="Entrez un nombre" />
+        <h4>≡</h4>
+        <input type="text" id="modulo" placeholder="Entrez le modulo" /><br><br>
+        <button onclick="congruencepetit()">Validez</button>
+        <h4 id="resultat1"></h4>
+    </div>
 </body>
 </html>
