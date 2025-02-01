@@ -49,11 +49,21 @@
     </nav>
 
     <div id="petitcongruence">
-        <input type="text" id="nombre" placeholder="Entrez un nombre" />
+        <h3>Congruence avec de simple nombre</h3>
+        <input type="number" id="nombre" placeholder="Entrez un nombre" />
         <h4>≡</h4>
-        <input type="text" id="modulo" placeholder="Entrez le modulo" /><br><br>
+        <input type="number" id="modulo" placeholder="Entrez le modulo" /><br><br>
         <button onclick="congruencepetit()">Validez</button>
         <h4 id="resultat1"></h4>
+    </div>
+    <div id="grandecongruence">
+        <h3>Congruence avec des puissance</h3>
+        <input type="number" id="nombre2" placeholder="Entrez un nombre" />
+        <input type="number" id="puissance" placeholder="Entrez la puissance" />
+        <h4>≡</h4>
+        <input type="number" id="modulo2" placeholder="Entrez le modulo" /><br><br>
+        <button onclick="congruencegrande()">Validez</button>
+        <h4 id="resultat2"></h4>
     </div>
 </body>
 </html>

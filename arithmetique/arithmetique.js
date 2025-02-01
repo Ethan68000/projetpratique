@@ -1,12 +1,12 @@
-const listepremier = [1,2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97];
+let listepremier = [1,2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97];
 function premier() {
-    const nombreatester = parseInt(document.getElementById("nombredepartpremier").value);
+    let nombreatester = parseInt(document.getElementById("nombredepartpremier").value);
     if (isNaN(nombreatester) || nombreatester < 2) { //test si le nombre n'est pas correct ou plus petit que 2 car 1 c logique
         document.getElementById("resultat").innerText = "Veuillez entrer un nombre entier supérieur ou égal à 2.";
         return;
     }
 
-    const nombrediminuer = Math.sqrt(nombreatester);
+    let nombrediminuer = Math.sqrt(nombreatester);
     let nombrepremieroupas = true; // On suppose que le nombre est premier au départ
     let explication = "";
 
@@ -41,13 +41,13 @@ function premier() {
 }
 
 function nombreaquotientreste(){
-    const nombreatester = parseInt(document.getElementById("nombredeparttest").value);
-    const nombreadividante = parseInt(document.getElementById("quotient").value);
+    let nombreatester = parseInt(document.getElementById("nombredeparttest").value);
+    let nombreadividante = parseInt(document.getElementById("quotient").value);
 
     // Division entière
-    const b = Math.floor(nombreatester / nombreadividante);
+    let b = Math.floor(nombreatester / nombreadividante);
     // Reste de la division
-    const reste = nombreatester % nombreadividante;
+    let reste = nombreatester % nombreadividante;
 
     document.getElementById("resultat2").innerText = `Le nombre ${nombreatester} = ${b} * ${nombreadividante} + ${reste} `;
 
@@ -55,7 +55,7 @@ function nombreaquotientreste(){
 
 function premiermultiple() {
     // Récupérer la valeur de l'input
-    const nombreDepart = parseInt(document.getElementById("nombredepartpremiermul").value);
+    let nombreDepart = parseInt(document.getElementById("nombredepartpremiermul").value);
 
     // Vérifier si l'entrée est valide
     if (isNaN(nombreDepart) || nombreDepart < 1) {
@@ -65,7 +65,7 @@ function premiermultiple() {
 
     // Initialisation des variables
     let nombre = nombreDepart;
-    const facteurs = [];
+    let facteurs = [];
 
     // Trouver les facteurs premiers
     for (let diviseur = 2; diviseur <= nombre; diviseur++) {
@@ -76,14 +76,14 @@ function premiermultiple() {
     }
 
     // Afficher le résultat
-    const resultat = facteurs.join(" * ");
+    let resultat = facteurs.join(" * ");
     document.getElementById("resultat3").innerText = `${nombreDepart} = ${resultat}`;
 }
 
 function nbrecommun() {
     // Récupérer les valeurs des inputs
-    const nombre1 = parseInt(document.getElementById("nombre1").value);
-    const nombre2 = parseInt(document.getElementById("nombre2").value);
+    let nombre1 = parseInt(document.getElementById("nombre1").value);
+    let nombre2 = parseInt(document.getElementById("nombre2").value);
 
     // Vérifier si les entrées sont valides
     if (isNaN(nombre1) || isNaN(nombre2) || nombre1 < 1 || nombre2 < 1) {
@@ -96,7 +96,7 @@ function nbrecommun() {
     let b = nombre2;
 
     while (b !== 0) {
-        const reste = a % b;
+        let reste = a % b;
         a = b;
         b = reste;
     }

@@ -1,11 +1,11 @@
 function creationmatrice() {
-    const nbligne = parseInt(document.getElementById("nombreligne").value);
-    const nbcolonne = parseInt(document.getElementById("nombrecol").value);
+    let nbligne = parseInt(document.getElementById("nombreligne").value);
+    let nbcolonne = parseInt(document.getElementById("nombrecol").value);
 
-    const matrice = [];
+    let matrice = [];
 
     for (let i = 0; i < nbligne; i++) {
-        const ligne = [];
+        let ligne = [];
         for (let j = 0; j < nbcolonne; j++) {
             ligne.push(Math.floor(Math.random() * 201) - 100); // Génère un nombre aléatoire entre -100 et 100
         }
@@ -16,13 +16,13 @@ function creationmatrice() {
 }
 
 function afficherMatricealeatoire(matrice) {
-    const resultat = document.getElementById("resultatmatrice");
+    let resultat = document.getElementById("resultatmatrice");
     resultat.innerHTML = matrice.map(ligne => ligne.join(", ")).join("<br>");
 }
 
 function demanderDimensions() {
-    const operation = document.getElementById("operateurmatrice").value;
-    const dimensionInput = document.getElementById("dimensionInput");
+    let operation = document.getElementById("operateurmatrice").value;
+    let dimensionInput = document.getElementById("dimensionInput");
 
     dimensionInput.innerHTML = `
         <h4>Dimensions des matrices</h4>
@@ -39,10 +39,10 @@ function demanderDimensions() {
 }
 
 function effectuerOperation(operation) {
-    const ligne1 = parseInt(document.getElementById("nombreligne1").value);
-    const col1 = parseInt(document.getElementById("nombrecol1").value);
-    const ligne2 = parseInt(document.getElementById("nombreligne2").value);
-    const col2 = parseInt(document.getElementById("nombrecol2").value);
+    let ligne1 = parseInt(document.getElementById("nombreligne1").value);
+    let col1 = parseInt(document.getElementById("nombrecol1").value);
+    let ligne2 = parseInt(document.getElementById("nombreligne2").value);
+    let col2 = parseInt(document.getElementById("nombrecol2").value);
 
     // Vérification des dimensions
     if ((operation == 1 || operation == 2) && (ligne1 !== ligne2 || col1 !== col2)) {
@@ -55,8 +55,8 @@ function effectuerOperation(operation) {
     }
 
     // Générer les matrices
-    const matrice1 = creationMatrice(ligne1, col1);
-    const matrice2 = creationMatrice(ligne2, col2);
+    let matrice1 = creationMatrice(ligne1, col1);
+    let matrice2 = creationMatrice(ligne2, col2);
 
     // Effectuer l'opération
     let resultat = [];
@@ -73,9 +73,9 @@ function effectuerOperation(operation) {
 }
 
 function creationMatrice(nbligne, nbcolonne) {
-    const matrice = [];
+    let matrice = [];
     for (let i = 0; i < nbligne; i++) {
-        const ligne = [];
+        let ligne = [];
         for (let j = 0; j < nbcolonne; j++) {
             ligne.push(parseFloat(prompt(`Entrez le coefficient (${i + 1}, ${j + 1}) de la matrice:`)));
         }
@@ -93,9 +93,9 @@ function soustractionMatrices(matrice1, matrice2) {
 }
 
 function multiplicationMatrices(matrice1, matrice2) {
-    const resultat = [];
+    let resultat = [];
     for (let i = 0; i < matrice1.length; i++) {
-        const ligne = [];
+        let ligne = [];
         for (let j = 0; j < matrice2[0].length; j++) {
             let somme = 0;
             for (let k = 0; k < matrice1[0].length; k++) {
@@ -109,7 +109,7 @@ function multiplicationMatrices(matrice1, matrice2) {
 }
 
 function afficherMatrice(matrice, titre) {
-    const resultat = document.getElementById("resultatmatrice2");
+    let resultat = document.getElementById("resultatmatrice2");
     resultat.innerHTML = `<h4>${titre}</h4>` + matrice.map(ligne => ligne.join(", ")).join("<br>");
 }
 

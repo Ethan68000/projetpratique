@@ -1,7 +1,7 @@
 function convertir() {
     // Récupérer les valeurs des champs
-    const nombreDepart = document.getElementById("nombredepart").value;
-    const choixBase = document.getElementById("choixbase").value;
+    let nombreDepart = document.getElementById("nombredepart").value;
+    let choixBase = document.getElementById("choixbase").value;
 
     // Vérifier si le champ est vide
     if (!nombreDepart) {
@@ -26,8 +26,8 @@ function convertir() {
 
 // Fonction pour base 2 vers base 16
 function base2a16() {
-    const nombreDepart = document.getElementById("nombredepart").value;
-    const nombreEnBase16 = parseInt(nombreDepart, 2).toString(16).toUpperCase();
+    let nombreDepart = document.getElementById("nombredepart").value;
+    let nombreEnBase16 = parseInt(nombreDepart, 2).toString(16).toUpperCase();
     if (isNaN(parseInt(nombreDepart, 2))) {
         alert("Veuillez entrer un nombre valide en base 2.");
     } else {
@@ -37,8 +37,8 @@ function base2a16() {
 
 // Fonction pour base 2 vers base 10
 function base2a10() {
-    const nombreDepart = document.getElementById("nombredepart").value;
-    const nombreEnBase10 = parseInt(nombreDepart, 2);
+    let nombreDepart = document.getElementById("nombredepart").value;
+    let nombreEnBase10 = parseInt(nombreDepart, 2);
     if (isNaN(nombreEnBase10)) {
         alert("Veuillez entrer un nombre valide en base 2.");
     } else {
@@ -48,8 +48,8 @@ function base2a10() {
 
 // Fonction pour base 10 vers base 16
 function base10a16() {
-    const nombreDepart = document.getElementById("nombredepart").value;
-    const nombreEnBase16 = parseInt(nombreDepart, 10).toString(16).toUpperCase();
+    let nombreDepart = document.getElementById("nombredepart").value;
+    let nombreEnBase16 = parseInt(nombreDepart, 10).toString(16).toUpperCase();
     if (isNaN(parseInt(nombreDepart, 10))) {
         alert("Veuillez entrer un nombre valide en base 10.");
     } else {
@@ -59,8 +59,8 @@ function base10a16() {
 
 // Fonction pour base 16 vers base 10
 function base16a10() {
-    const nombreDepart = document.getElementById("nombredepart").value;
-    const nombreEnBase10 = parseInt(nombreDepart, 16);
+    let nombreDepart = document.getElementById("nombredepart").value;
+    let nombreEnBase10 = parseInt(nombreDepart, 16);
     if (isNaN(parseInt(nombreDepart, 16))) {
         alert("Veuillez entrer un nombre valide en base 16.");
     } else {
@@ -70,8 +70,8 @@ function base16a10() {
 
 // Fonction pour base 10 vers base 2
 function base10a2() {
-    const nombreDepart = document.getElementById("nombredepart").value;
-    const nombreEnBase2 = parseInt(nombreDepart, 10).toString(2);
+    let nombreDepart = document.getElementById("nombredepart").value;
+    let nombreEnBase2 = parseInt(nombreDepart, 10).toString(2);
     if (isNaN(parseInt(nombreDepart, 10))) {
         alert("Veuillez entrer un nombre valide en base 10.");
     } else {
@@ -81,8 +81,8 @@ function base10a2() {
 
 // Fonction pour base 16 vers base 2
 function base16a2() {
-    const nombreDepart = document.getElementById("nombredepart").value;
-    const nombreEnBase2 = parseInt(nombreDepart, 16).toString(2);
+    let nombreDepart = document.getElementById("nombredepart").value;
+    let nombreEnBase2 = parseInt(nombreDepart, 16).toString(2);
     if (isNaN(parseInt(nombreDepart, 16))) {
         alert("Veuillez entrer un nombre valide en base 16.");
     } else {
