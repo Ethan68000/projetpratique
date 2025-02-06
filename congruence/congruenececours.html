@@ -70,5 +70,44 @@
             </li>
         </ul>
     </nav>
+    <h1>Bienvenue sur le cour de congruence</h1>
+    <h2>Sommaire</h2>
+    <h3>Qu'est ce qu'une congruence</h3>
+    <h3>Calcul de congruence avec des nombres simples</h3>
+    <h3>Calcul de congruence avec des puissances</h3>
+    <section id="structure">
+        <div id="defcong">
+            <p>Soit n un entier non nul et a b deux entiers naturels <br>
+            On dit que a et b son congrus modulo n si les divisions euclidiennes de a et b par n donnant le même reste<br>
+            On écrit cela : a ≡ b [n]</p>
+        </div>
+        <div id="congsimple">
+            <p>1ère étape : Diviser le nombre choisi par le modulo pour obtenir un quotient.<br>
+                2ème étape : Exprimer ce nombre sous la forme : a = n * q + r où n est le modulo, q est le quotient et r est le reste.<br> 
+                3ème étape : Le reste obtenu à ce calcul est le résultat de votre congruence</p>
+            <p>Exemple :  <br>
+                Si vous prenez a = 53 et n = 7
+                53 / 7 ~ 7.5 donc 7 * x + b = 53 <br>
+                Comme 7 * 7 = 49 et 7 * 8 = 56 alors x = 7<br>
+                Enfin, on fait 53 - 7 * 7 = 4. Donc b = 4 <br>
+                Finalement 53 ≡ 4 [7] car 53 = 7 * 7 + 4
+            </p>
+        </div>
+        <div id="congpuissance">
+            <p>Pour effectuer une congruence avec des chiffres qui ont des puissances on doit effectuer la démarche suivante :<br>
+                1ère étape : Déterminer la congruence simple du nombre de base (sans la puissance). <br>
+                2ème étape : prenez le reste de cette congruence et trouver une puissance de ce nombre ou x<sup>n</sup> ≡ 1 ou -1 [n]<br>
+                3ème étape : Décomposer la puissance de départ en fonction de cette puissance obtenue.
+                4ème étape : Enfin, utiliser les propriétés de la congruence pour simplifier le calcul à savoir : <br>
+                x<sup> a * b + c</sup> = (x<sup>a</sup>)<sup>b</sup> * x<sup>c</sup>
+            </p>
+            <p>Exemple avec 106<sup>50</sup> ≡ n [13] <br>
+            106<sup>50</sup> ≡ 2<sup>50</sup> [13] car 106 = 13 * 8 + 2 <br>
+            106<sup>50</sup> ≡ 2<sup>6 * 8 + 2</sup> [13] car 2<sup>6</sup> ≡ -1 [13] <br>
+            106<sup>50</sup> ≡ (2<sup>6</sup>)<sup>8</sup> * 2<sup>2</sup> [13] <br>
+            106<sup>50</sup> ≡ (-1)<sup>8</sup> * 4 [13] car 2<sup>6</sup> ≡ -1 [13] <br>
+            106<sup>50</sup> ≡ 4 [13]</p>
+        </div>
+    </section>
 </body>
 </html>

@@ -71,5 +71,62 @@
         </ul>
     </nav>
     <h1>Bienvenue sur le cours de changement de base</h1>
+    <h2>Sommaire</h2>
+    <h3>Base 2 définition</h3>
+    <h3>Base 10 définition</h3>
+    <h3>Base 16 définition</h3>
+    <h3>Conversion base 2 à base 10</h3>
+    <h3>Conversion base 2 a 16</h3>
+    <h3>Conversion base 10 a 2</h3>
+    <h3>Conversion base 10 a 16</h3>
+    <h3>Conversion base 16 a 2</h3>
+    <h3>Conversion base 16 a 10</h3>
+    <h3>Addition base 2</h3>
+    <section id="structuredef">
+        <div id="base2def">
+            <p></p>
+        </div>
+        <div id="base10def">
+            <p></p>
+        </div>
+        <div id="base16def">
+            <p></p>
+        </div>
+        
+    </section>
+    <section id="structureconversion">
+        <div id="convbase2a10">
+            <h3>Pour changer de la base 2 a 10 il faut prend chaque chiffre et on le mutiplie par 2^n si il est a 1 en commencant a droite par 2^0</h3>
+            <p>prenons l'exemple de ce nombre <br> 1001 1101(2) = 157(10) <br> car on fait 2^0 + 2^2 + 2^3 + 2^4 + 2^7 = 1 + 4 + 8 + 16 + 128 = 157 </p>
+        </div>
+        <div id="convbase2a16">
+            <h3>Pour changer de la base 2 a 16 il faut prend des packets de 4 nombre et les réunirs ensemble</h3>
+            <p>prenons l'exemple de ce nombre <br> 1001 1101 <br> 9 D</p>
+        </div>
+        <div id="convbase10a2">
+            <h3>Pour changer un nombre de la base 10 à 2, prenez le nombre de départ et /2 <br>
+            On garde le quotient et on note le reste et on effectue ces étapes jusqu'à tant qu'on obtient un chiffre < 2. <br>
+            Une fois arrivé à la fin on lit le reste de chaque nombre de bas en haut pour obtenir le nombre en base 2 </h3>
+            <p>Prenons l'exemple de 221(10)</p>
+            <!--image-->
+            <p>Donc 221(10) = 11011101(2)</p>
+        </div>
+        <div id="convbase10a16">
+            <h3>Pour changer un nombre de la base 10 à 16, prenez le nombre de départ et /16 <br>
+            On garde le quotient et on note le reste et on effectue ces étapes jusqu'à tant qu'on obtient un chiffre < 16. <br>
+            Une fois arrivé à la fin on lit le reste de chaque nombre de bas en haut pour obtenir le nombre en base 16 </h3>
+            <p>Prenons l'exemple de 221(10)</p>
+            <!--image-->
+            <p>Donc 22104(10) = 5658(16)</p>
+        </div>
+        <div id="convbase16a2">
+            <h3>Pour changer de la base 16 a 2 il faut prendre chaque nombre et les convertir en paquets de 4 chiffre en base 2</h3>
+            <p>prenons l'exemple de ce nombre <br> A 8 5 <br> 1010 1000 0101</p>
+        </div>
+        <div id="convbase16a10">
+            <h3>Pour changer de la base 16 a 10 il faut prend chaque chiffre et on le mutiplie par 16^n en commencant a droite par 16^0</h3>
+            <p>prenons l'exemple de ce nombre <br> A98B(16) = 43403(10) <br> car on fait B * 16^0 + 8 * 16^1 + 9 * 16^2 + A * 16^3 = 11 + 128 + 2304 + 40960 = 43403 </p>
+        </div>
+    </section>
 </body>
 </html>
