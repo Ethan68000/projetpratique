@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../math.css" rel="stylesheet">
     <link href="inscription.css" rel="stylesheet">
-    <script src="inscription.js"></script>
+    <script src="inscription.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -74,30 +74,31 @@
     </nav>
     <div id="inscription">
         <h2>Inscription</h2>
-        <form action="#" method="post" onclick="inscription()">
-            <label for="Nom">Nom :</label>
+        <form id="formInscription">
+            <label for="nom">Nom :</label>
             <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
             <br>
-            <label for="Prenom">Prenom :</label>
-            <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prenom" required>
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prénom" required>
             <br>
             <label for="identifiant">Identifiant :</label>
             <input type="text" id="identifiant" name="identifiant" placeholder="Entrez votre identifiant" required>
             <br>
-            <label for="téléphone">Téléphone :</label>
-            <input type="tel" id="téléphone" name="téléphone" placeholder="Entrez votre téléphone" required>
+            <label for="telephone">Téléphone :</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="Entrez votre téléphone" required>
             <br>
-            <label for="email">email :</label>
-            <input type="mail" id="email" name="email" placeholder="Entrez votre email" required>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
             <br>
             <label for="mdp">Mot de passe :</label>
-            <input type="text" id="mdp" name="mdp" placeholder="Entrez votre mot de passe" required>
+            <input type="password" id="mdp" name="mdp" placeholder="Entrez votre mot de passe" required>
             <br>
             <label for="Confirmationmdp">Confirmation mot de passe :</label>
-            <input type="password" id="Confirmationmdp" name="Confirmationmdp" placeholder="Confirmation mot de passe" required>
+            <input type="password" id="Confirmationmdp" name="Confirmationmdp" placeholder="Confirmez votre mot de passe" required>
             <br>
             <button type="submit">S'inscrire</button>
         </form>
+        <p id="message"></p>
     </div>
 </body>
 </html>
