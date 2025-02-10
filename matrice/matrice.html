@@ -71,6 +71,52 @@
             </li>
         </ul>
     </nav>
-    
+    <h2>Sommaire</h2>
+    <h3>Définition d'une matrice</h3>
+    <h3>Opération de matrices</h3>
+    <h3>Multiplication de matrices</h3>
+    <section id="structure">
+        <div id="définition">
+            <h4>Définition</h4>
+            <p>Une matrice A peut être vue comme "un tableau de nombres".<br>
+            Supposons qu'elle comporte n lignes et p colonnes ( n et p dont des entier > 1).<br>
+            On le note ainsi :
+            <img src = "matricesimpleA.png"><br>
+            L'élément qui se situe à la i<sup>e</sup> ligne et j<sup>e</sup> colonne est noté aij. On l'apelle également coefficient.<br>
+            <strong>Attention</strong> : les indices des lignes et des colonnes commencent à 1.<br>
+            On dit aussi que A est une matrice n * p. Si n = p on dit que A est une matrice carré d'ordre n.<br>
+            - Une matrice dont tous les coefficients sont nuls est dite nulle.<br>
+            - La matrice carré d'ordre n dont tous les éléments sont nuls sauf ceux de la diagonale qui valent 1 s'appelle la matrice identité (I).<br>
+            <img src="matriceI.png"> </p>
+        </div>
+        <div id="exemple">
+            <h4>Exemples</h4>
+            <img src="matricexsimple.png">
+        </div>
+        <div id="opermatrice">
+            <div id="définition">
+                <h4>Définition : addition</h4>
+                <p>Soient a et b deux matrices n * p, o note A + B la matrice n * p obtenu en ajoutant les coefficients correspondants de A et de B.<br>
+                <img src="defadditionmat.png"></p>
+            </div>
+            <div id="exemple">
+                <h4>Exemple</h4>
+                <img src="exaditionmat.png">
+            </div>
+        </div>
+        <div id="multiplematrice">
+            <div id="définition">
+                <h4>Définition : Multiplication de deux matrices</h4>
+                <p>Soient A une matrice n * p et B une matrice p * q avec <strong>le nombre de colonnes de A = nombre de ligne de B<>.<br>
+                Alors il est possible de définir C = A * B, produit de A par B.<br>
+                C'est une matrice n * q dont les coefficients sont ainsi :<br>
+                <img src="defmultiplemat.png"></p>
+            </div>
+            <div id="exemple">
+                <h4>Exemple</h4>
+                <img src="exmultiplemat.png">
+            </div>
+        </div>
+    </section>
 </body>
 </html>
