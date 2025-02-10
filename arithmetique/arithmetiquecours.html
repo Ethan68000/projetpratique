@@ -70,5 +70,105 @@
             </li>
         </ul>
     </nav>
+    <div id="Sommaire">
+        <h2>Définition arythmétique</h2>
+        <h2>Nombres diviseurs ensembles</h2>
+        <h2>Nombre premier</h2>
+        <h2>PGCD et euclide</h2>
+    </div>
+    <section id="structure">
+        <div id="defarythm">
+            <h3>Définiton aryhtmétique</h3>
+            <p>Soient deux entiers naturels a et b, avec b > 0.<br> Effectuer la division euclidienne de a par b consiste à déterminer les deux entiers q et r tels que : <br>
+            a = b * q + r et 0 <= r < b<br>
+            a est le <strong>dividente</strong>, b est le <strong>diviseur</strong>, q est le <strong>quotient</strong> et r le <strong>reste</strong></p>
+            <p><strong>Exemple : </strong> Effectuons la divisions euclidienne de 79 par 4<br>
+            ici a = 79, b = 4, q = ? et r = ?.<br>
+            Pour obtenir q il faut faire <strong>a / b</strong> donc dans cet exemple 79/4 ~ 19,75. Donc q = 19<br>
+            Pour obtenir r il faut faire <strong>a - b * q</strong> donc dans cet exemple 79 - 4*19 = 79 - 76 = 3<br>
+            Donc 79 = 4 * 19 + 3 avec q = 19 et r = 3</p>
+        </div>
+        <div id="Divisuers2">
+            <h3>Nombres diviseurs ensembles</h3>
+            <div id="propriété">
+                <h4>Propriété</h4>
+                <p>Soient a et b deux entiers naturels. Dire que b est un diviseur de a veut dire que la division euclidienne de a par b donne un reste nul. Cela signifie donc qu'il existe un entier naturel k tel que<br>
+                a = k * b<br>
+                On peut également dire que a est multiple de b.</p>
+            </div>
+            <div id="remarque">
+                <h4>Remarque</h4>
+                <p>Si b divise a il existe un entier naturel k tel que<br>
+                a = k * b<br>
+                et donc k divise a également.</p>
+            </div>
+            <div id="exemple">
+                <h4>Exemple</h4>
+                <p>20 = 5 * 4 donc 5 et 4 sont deux diviseurs de 20.</p>
+            </div>
+        </div>
+        <div id="premier">
+            <div id="defpremier">
+                <h4>Définition : entier naturel premier</h4>
+                <p>Un entier naturel est dit premier lorsqu'il admet 2 diviseurs distinct : 1 et lui même :<br>
+                - 0 n'est pas premier : 0 = 1 * 0 = 2 * 0 = 3 * 0 = ...<br>
+                - 1 n'a qu'un diviseur : lui-même. il n'est pas premier.<br>
+                - 2 est premier<br>
+                - 3 est premier<br>
+                - 4 n'est pas premier car 2 *2 = 4 
+                </p>
+                <details>
+                    <summary> Liste des nombres premiers jusqu'à 100</summary>
+                    <p>{2; 3; 5; 7 ; 11; 13; 17; 19; 23; 29; 31; 37; 41; 43; 47<br>
+                    53; 59; 61; 67; 71; 73; 79; 83; 89; 97}</p>
+                    <a href="simarithmetique.html" title="Simulateur nombre premier">Simulateur nombre premier</a>
+                </details>
+            </div>
+            <div id="astuce">
+                <h4>Astuce pour trouver si un nombre est premier</h4>
+                <p>Pour savoir si un nombre est premier on fait &radic;x = b et donc on regarde si x est divisible par les nombres premiers < b<br>
+                Si ce n'est pas le cas alors x est premier<br><br>
+                Exemple avec 133 :<br>
+                &radic;133 ~ 11.5 donc on regarde si 133 est divisible par 2, 3, 5, 7 ou 11<br>
+                On trouve que 133 = 19 * 7 + 0 donc 133 n'est pas premier</p> 
+            </div>
+            <div id="decomprodpremier">
+                <div id="propriété">
+                    <h4>Propriété : décomposition en produit de facteurs premiers</h4>
+                    <p>Tout entier naturel >=2 se décompose de manière unique en produit de facteurs premiers<br>
+                    Pour décomposer un nombre en produit de facteurs premiers on cherche d'abord ses petits diviseurs premiers et on recommence jusqu'à trouver 1</p>
+                </div>
+                <div id="Exemple">
+                    <h4>Exemple avec 684 :</h4>
+                    <p>684 / 2 = 342<br>
+                    342 / 2 = 171<br>
+                    171 / 2  = 85.5 donc on passe à 3<br>
+                    171 / 3 = 57<br>
+                    57 / 3 = 19<br>
+                    Comme 19 est premier, on fait 19/19 = 1.<br>
+                    Donc 684 = 2*2*3*3*19 = 2<sup>2</sup>*3<sup>2</sup>*19  </p>
+                </div>
+            </div>
+            <div id="PGCD">
+                <div id="Définition">
+                    <h4>Définition</h4>
+                    <p>Soient a et b deux entiers naturels non nuls.<br>
+                    On note pgcd(a;b) et on lit "pgcd de a et de b" le plus grand entier qui divise à la fois a et b.<br>
+                    Si le pgcd(a;b) = 1, alors on dit que a et b sont premiers entre eux</p>
+                </div>
+                <div id="exemple">
+                    <h4>Exemples</h4>
+                    <p>Le plus grand nombre qui divise à la fois 12 et 16, c'est 4. Ainsi pgcd(12;16) = 4.<br>
+                    25 et 27 n'ont aucun diviseur commun plus grand que 1 : pgcd(25;27) = 1.  </p>
+                </div>
+                <div id="astuce">
+                    <h4>Astuce</h4>
+                    <p>Pour calculer le pgcd on utilise l'algorithme d'Euclide.<br>
+                    Par exemple pour 420 et 182 :</p>
+                    <img src="euclideex.png">
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

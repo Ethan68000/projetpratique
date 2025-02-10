@@ -74,21 +74,21 @@
     </nav>
     <h1>Bienvenue sur le simulateur d'arithmetique</h1>
     <div id="affichage">
+        <div id="quomulreste">
+            <h3>Entrez un nombre et son diviseur pour découvrir comment il est décomposé</h3>
+            <input type="text" id="nombredeparttest" placeholder="nombre de départ"/>
+            <br>
+            <h3>/</h3>
+            <input type="text" id="quotient" placeholder="diviseur"/>
+            <button onclick="nombreaquotientreste()">validez</button>
+            <h3 id="resultat2"></h3>
+        </div>
         <div id="nbrepremierpas">
             <h3>Entrez un nombre pour voir si il est premier</h3>
             <input type="text" id="nombredepartpremier" />
             <button onclick="premier()">validez</button>
             <h3 id="resultat"></h3>
         </div>    
-        <div id="quomulreste">
-            <h3>Entrez un nombre et son diviseur pour découvrir comment il est décomposé</h3>
-            <input type="text" id="nombredeparttest" placeholder="entrez le nombre de départ"/>
-            <br>
-            <h3>/</h3>
-            <input type="text" id="quotient" placeholder="entrez le diviseur"/>
-            <button onclick="nombreaquotientreste()">validez</button>
-            <h3 id="resultat2"></h3>
-        </div>
         <div id="produitfactprem">
             <h3>Entrez un nombre et son diviseur pour découvrir comment il est décomposé en facteur premier</h3>
             <input type="text" id="nombredepartpremiermul" />
