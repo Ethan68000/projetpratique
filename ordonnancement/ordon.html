@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../math.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <img src="../logo.jpg" alt="Logo Math SIO" style="width: 80px; height: auto;">
+            </li>
+            <li><a href="../math.html">Accueil</a></li>
+            <!-- Calculatrice -->
+            <li><a href="../calculatrice/calculatrice.html">Calculatrice</a></li>
+    
+            <!-- Changement de base -->
+            <li>
+                <a href="#">Changement de base</a>
+                <ul>
+                    <li><a href="../changementdebase/changbase.html">Cours changement de base</a></li>
+                    <li><a href="../changementdebase/simulateurchangbase.html">Simulateur changement de base</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">arithmetique</a>
+                <ul>
+                    <li><a href="../arithmetique/arithmetiquecours.html">Cours arithmetique</a></li>
+                    <li><a href="../arithmetique/simarithmetique.html">Simulateur arithmetique</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Matrices</a>
+                <ul>
+                    <li><a href="../matrice/matrice.html">Cours Matrices</a></li>
+                    <li><a href="../matrice/simulateurmatrice.html">Simulateur Matrices</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Congruence</a>
+                <ul>
+                    <li><a href="../congruence/congruenececours.html">Cours Congruence</a></li>
+                    <li><a href="../congruence/simcongruence.html">Simulateur Congruence</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Niveaux</a>
+                <ul>
+                    <li><a href="../niveaux/niveaux.html">Cours Niveaux</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Algèbre de boole</a>
+                <ul>
+                    <li><a href="../algebreboole/boole.html">Cours Algèbre de boole</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Théorie des ensembles</a>
+                <ul>
+                    <li><a href="../theorieensemble/ensemble.html">Cours théorie des ensembles</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <h1>Ordonnancement</h1>
+    <h2>Sommaire</h2>
+    <h3>Définition ordonnancement</h3>
+    <h3>Date au plus tôt </h3>
+    <h3>Date au plus tard</h3>
+    <h3>Tâches et chemin critique</h3>
+    <h3>Marges</h3>
+    <h3>Exemple global</h3>
+    <div id="définiton">
+        <h4>Définition ordonnancement</h4>
+        <p>Faire l'ordonnancement d'un projet consiste à organiser ce projet en respectant les contraintes d'antériorité des tâches, tout en minimisant la durée totale du projet</p>
+    </div>
+    <div id="astuce">
+        <h4>Astuce</h4>
+        <p>Pour construire un graphe d'ordonnancement, on effectue les étapes suivantes :<br>
+            1. On commence par déterminer le niveau de chaque tâche dans le graphe.<br>
+            2. On représente le projet par un graphe pondéré, dans lequel:
+            - chaque tâche est représentée par un sommet,<br>
+            - les sommets sont alignés verticalement par niveau,<br>
+            les arcs représentent les contraintes d'antériorité (un arc va de i à j si il est nécessaire d'avoir fait i pour faire j),<br>
+            - la valeur de chaque arc est la durée de la tâche à l'origine de l'arc,
+            deux sommets (ne correspondant pas à des tâches) sont placés aux extrémités du graphe: Début et Fin.</p>
+    </div>
+    <div id="dateauplustottard">
+        <div id="définition">
+            <h4>Définition date au plus tôt</h4>
+            <p>La date au plus tôt d'une tâche est la date minimale à laquelle on peut commencer une tâche, car toutes les tâches antérieures sont terminées.</p>
+        </div>
+        <div id="définition">
+            <h4>Définition date au plus tard</h4>
+            <p>La date de début au plus tard d'une tâche est la date maximale à laquelle on peut commencer une tâche sans que cela repousse la fin du projet.<br>
+            Déterminer les dates au plus tard nécessite donc de lire le garphe en partant de la fin.</p>
+        </div>
+    </div>
+    <div id="critique">
+        <div id="définition">
+            <h4>Définition tâches et chemin critique </h4>
+            <p>- On appelle tâche critique une tâche dont les dates au plus tôt et au plus tard sont les mêmes. Elles ne tolèrent aucun retard.<br>
+            - Un chemin critique est un chemin reliant le début à la fin, et qui n'est constitué que de tâches critiques.</p>
+        </div>
+    </div>
+    <div id="marge">
+        <div id="définition">
+            <h4>Définition marge totale et libre </h4>
+            <p>- La marge totale d'une tâche est le retard maximum que l'on peut accepter sur le début de la tâche sans que cela retarde la date de fin du projet.<br>
+                Elle est obtenue en faisant : date au plus tard - date au plus tôt.<br>
+                - La marge libre d'une tâche est le retard maximum que l'on peut accepter sur la date de début au plus tôt de la tâche sans que cela ne retarde la date de début au plus tôt des successeurs de la tâche.<br>
+                Elle est obtenue en faisant : min(dates au plus tôt suivantes) - durée de la tâche - date au plus tôt de la tâche.</p>
+        </div>
+    </div>
+    <div id="exemple">
+        <h4>Exemple global</h4>
+        <img src="ordonnacementex.png">
+    </div>
+</body>
+</html>
