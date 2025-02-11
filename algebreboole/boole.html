@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../math.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <img src="../logo.jpg" alt="Logo Math SIO" style="width: 80px; height: auto;">
+            </li>
+            <li><a href="../math.html">Accueil</a></li>
+            <!-- Calculatrice -->
+            <li><a href="../calculatrice/calculatrice.html">Calculatrice</a></li>
+    
+            <!-- Changement de base -->
+            <li>
+                <a href="#">Changement de base</a>
+                <ul>
+                    <li><a href="../changementdebase/changbase.html">Cours changement de base</a></li>
+                    <li><a href="../changementdebase/simulateurchangbase.html">Simulateur changement de base</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">arithmetique</a>
+                <ul>
+                    <li><a href="../arithmetique/arithmetiquecours.html">Cours arithmetique</a></li>
+                    <li><a href="../arithmetique/simarithmetique.html">Simulateur arithmetique</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Matrices</a>
+                <ul>
+                    <li><a href="../matrice/matrice.html">Cours Matrices</a></li>
+                    <li><a href="../matrice/simulateurmatrice.html">Simulateur Matrices</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Congruence</a>
+                <ul>
+                    <li><a href="../congruence/congruenececours.html">Cours Congruence</a></li>
+                    <li><a href="../congruence/simcongruence.html">Simulateur Congruence</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Niveaux</a>
+                <ul>
+                    <li><a href="../niveaux/niveaux.html">Cours Niveaux</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Ordonnancement</a>
+                <ul>
+                    <li><a href="../ordonnancement/ordon.html">Cours Ordonnancement</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Théorie des ensembles</a>
+                <ul>
+                    <li><a href="../theorieensemble/ensemble.html">Cours théorie des ensembles</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <h1>Algèbre de boole</h1>
+    <div id="définition">
+        <h3>Définition algèbre de boole</h3>
+        <p>Une algèbre de Boole, c'est un ensemble E muni de:<br>
+            - deux lois binaires notées + et x;<br>
+            - une loi unaire qui à a associe ā;<br>
+            - deux éléments particuliers notés 0 et 1;<br>
+            et telle que, pour tous éléments a, b et c de E:<br>
+            - Les deux lois binaires sont commutatives : a+b=b+ a et ab = ba<br>
+            - elles sont aussi associatives : a + (b+c) = (a+b)+c et a(bc) = (ab)c<br>
+            - x se distribue sur + : a(b+c)= ab + ac<br>
+            - + se distribue sur x : <strong>a+bc = (a+b)(a+c)</strong> <br>
+            c'est la seule propriété contre-intuitive, on la notera (*)<br>
+            - 0 est neutre pour + : 0+ a = a<br>
+            - 0 est absorbant pour x : 0a = 0<br>
+            - 1 est neutre pour x : 1a = a<br>
+            - 1 est absorbant pour + : 1+a=1<br>
+            - on a a+a1 et aa = 0</p>
+    </div>
+    <div id="propriété">
+        <h4>Propriété loi de Morgan</h4>
+        <p>Quels que soient les éléments de x et de y de E on a :<br>
+        <img src="morgandef.png"></p>
+    </div>
+    <div id="propriété">
+        <h4>Propriété Diagrammes de Karnaugh</h4>
+        <p>Un produit correspondant à une intersection, une somme à une union</p>
+
+    </div>
+    <div id="2var">
+        <h4>Avec 2 variables </h4>
+        <p>Le diagramme est un carré dont les quatres cases correspondent aux 4 produits ab, ab&#773, a&#773b, a&#773b&#773;</p>
+        <img src="2var.png">
+    </div>
+    <div id="3var">
+        <h4>Avec 3 variables</h4>
+        <p>Le diagramme est un rectangle dont les huit cases correspondent aux produits suivants</p>
+        <img src="3var.png">
+    </div>
+
+</body>
+</html>
