@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../math.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <img src="../logo.jpg" alt="Logo Math SIO" style="width: 80px; height: auto;">
+            </li>
+            <li><a href="../math.html">Accueil</a></li>
+            <!-- Calculatrice -->
+            <li><a href="../calculatrice/calculatrice.html">Calculatrice</a></li>
+    
+            <!-- Changement de base -->
+            <li>
+                <a href="#">Changement de base</a>
+                <ul>
+                    <li><a href="../changementdebase/changbase.html">Cours changement de base</a></li>
+                    <li><a href="../changementdebase/simulateurchangbase.html">Simulateur changement de base</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">arithmetique</a>
+                <ul>
+                    <li><a href="../arithmetique/arithmetiquecours.html">Cours arithmetique</a></li>
+                    <li><a href="../arithmetique/simarithmetique.html">Simulateur arithmetique</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Matrices</a>
+                <ul>
+                    <li><a href="../matrice/matrice.html">Cours matrices</a></li>
+                    <li><a href="../matrice/simulateurmatrice.html">Simulateur Matrices</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Congruence</a>
+                <ul>
+                    <li><a href="../congruence/congruenececours.html">Cours Congruence</a></li>
+                    <li><a href="../congruence/simcongruence.html">Simulateur Congruence</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Algèbre de boole</a>
+                <ul>
+                    <li><a href="../algebreboole/boole.html">Cours Algèbre de boole</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Ordonnancement</a>
+                <ul>
+                    <li><a href="../ordonnancement/ordon.html">Cours Ordonnancement</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Théorie des ensembles</a>
+                <ul>
+                    <li><a href="../theorieensemble/ensemble.html">Cours théorie des ensembles</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <h1>Graphes et niveaux</h1>
+    <h2>Sommaire</h2>
+    <h3>Définition d'un graphe</h3>
+    <h3>Tableau des successeurs</h3>
+    <h3>Tableau des prédécesseurs</h3>
+    <h3>Matrice adjacense</h3>
+    <h3>Chemin d'un graphe</h3>
+    <h3>Matrice d'accessibilité</h3>
+    <h3>Niveaux</h3>
+    <div id="définition">
+        <h4>Définition d'un graphe</h4>
+        <p>• Un graphe orienté est la donnée d'un ensemble S, et d'un ensemble A c S * S.<br>
+        • Les éléments de S sont appelés sommets.<br>
+        • Les éléments de A sont appelés arcs.<br>
+        • Si un arc va d'un sommet à lui-même, cet arc s'appelle une boucle.<br>
+        • Soit un arc (i, j). i est l'origine de cet arc, et j est l'extrémité de cet arc.<br>
+        • On appelle ordre du graphe le nombre de sommets du graphe, c'est-à-dire Card(S).</p>
+    </div>
+    <div id="exemple">
+        <h4>Exemple</h4>
+        <img src="graphexsimple.png">
+    </div>
+    <div id="sucesseurs">
+        <div id="définition">
+            <h4>Définition tableau des succeseurs</h4>
+            <p>Soit (i,j) un arc dans un graphe. On dit que j est un <strong>successeur</strong> de i dans ce graphe</p>
+        </div>
+        <div id="exemple">
+            <h4>Exemple</h4>
+            <img src="exsuccesseur.png">
+        </div>
+    </div>
+    <div id="predecesseurs">
+        <div id="définition">
+            <h4>Définition tableau des prédécesseurs</h4>
+            <p>Soit (i,j) un arc dans un graphe. On dit que i est un <strong>prédécésseurs</strong> de j dans ce graphe</p>
+        </div>
+        <div id="exemple">
+            <h4>Exemple</h4>
+            <img src="expredecesseur.png">
+        </div>
+    </div>
+    <div id="matriceadjacence">
+        <div id="définition">
+            <h4>Définition matrice adjacence</h4>
+            <p>On considère un graphe d'ordre n dont on a numéroté les sommets de 1 à n.<br>
+            La matrice d'adjacence de ce graphe est la matrice carrée d'ordre n dont l'élément d'indice (i,j) est égal au nombre d'arcs reliant le sommet numéro i au sommet numéro j.</p>
+        </div>
+        <div id="exemple">
+            <h4>Exemple</h4>
+            <img src="exmatriceadjacence.png">
+        </div>
+    </div>
+    <div id="chemin">
+        <div id="définition">
+            <h4>Définition chemin</h4>
+            <p>On considère un graphe de matrice d'adjacence M.<br>
+                 Pour tout nombre p≥ 1 entier, le coefficient d'indice (i, j) de MP est le nombre de chemins de longueur p reliant le sommet i au sommet j.<br>
+                Un chemin est dit "Hamilonien" lorsqu'il passe une fois et une seule par tout les sommets du graphe.</p>
+        </div>
+        <div id="astuce">
+            <h4>Astuce</h4>
+            <p>Pour déterminer l'ensemble des chemins de longueur p partant d'un sommet a, on procède de la façon suivante :<br>
+                - En déterminant les successeurs de a, on construit les chemins de longueur 1 partant de a,<br>
+                - En déterminant les successeurs de ces successeurs, on prolonge les chemins précédents en des chemins de longueur 2 partant de a.<br>
+                - On continue ainsi jusqu'à obtenir des chemins de longueur p.</p>
+        </div>
+        <div id="exemple">
+            <h4>Exemple</h4>
+            <img src="exchemin.png">
+        </div>
+    </div>
+    <div id="matrice accessibilité">
+        <div id="définition">
+            <h4>Définiton matrice accessibilité</h4>
+            <p>On considère ici un graphe simple orienté dont les sommets ont été numérotés de 1 à n. On note M sa matrice d'adjacence.<br>
+                • On dit qu'un sommet j est accessible depuis un sommet i si il existe un chemin allant de i à j.
+                • On appelle matrice d'accessibilité du graphe, et on note M^ , la matrice carrée d'ordre n dont le coefficient d'indice (i, j) vaut 1 si j est accessible depuis i et 0 sinon.<br>
+                On l'obtient en faisant M^= M ⊕ M<sup>[2]</sup> ⊕ · · · ⊕ M<sup>[n]</sup>
+            </p>
+        </div>
+        <div id="exemple">
+            <h4>Exemple</h4>
+            <img src="matriceaccesibilitéex.png">
+        </div>
+    </div>
+    <div id="niveaux">
+        <div id="définition">
+            <h4>Définition</h4>
+            <p>Dans un graphe simple orienté sans circuit, le <strong>niveau</strong> d'un sommet a est la longueur du plus long chemin se terminant en a.</p>
+        </div>
+        <div id="exemple">
+            <h4>Exemple</h4>
+            <img src="niveauxex.png">
+        </div>
+    </div>
+</body>
+</html>
